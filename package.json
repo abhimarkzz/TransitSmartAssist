@@ -1,0 +1,36 @@
+{
+  "name": "transitsmartassist",
+  "version": "1.0.0",
+  "description": "TransitSmartAssist — Smart Public Transportation Assistant powered by Advanced MongoDB & AI",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"bgBlue.bold,bgGreen.bold\" \"npm run dev --workspace=server\" \"npm run dev --workspace=client\"",
+    "dev:server": "npm run dev --workspace=server",
+    "dev:client": "npm run dev --workspace=client",
+    "build": "npm run build --workspace=server && npm run build --workspace=client",
+    "seed": "npm run seed --workspace=server",
+    "test": "npm run test --workspace=server",
+    "lint": "npm run lint --workspace=server && npm run lint --workspace=client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "keywords": [
+    "mongodb",
+    "transit",
+    "smart-city",
+    "geospatial",
+    "aggregation-pipeline",
+    "time-series",
+    "vector-search",
+    "atlas-search",
+    "change-streams",
+    "gemini"
+  ],
+  "author": "TransitSmartAssist Team",
+  "license": "MIT"
+}
