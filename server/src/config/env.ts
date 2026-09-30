@@ -6,7 +6,7 @@ dotenv.config();
 dotenv.config({ path: path.resolve(__dirname, '../../.env') });
 
 export const config = {
-  port: parseInt(process.env.PORT || '5000', 10),
+  port: parseInt(process.env.PORT || '5001', 10),
   nodeEnv: process.env.NODE_ENV || 'development',
   mongodbUri: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/transit_smart_assist?replicaSet=rs0&directConnection=true',
   mongodbDbName: process.env.MONGODB_DB_NAME || 'transit_smart_assist',
